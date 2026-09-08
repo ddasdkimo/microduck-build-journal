@@ -38,3 +38,14 @@ CAD 基準 b23317a485b3cec7d8417f352478778b3475173c。下載包保留 Apache-2.0
 ## 靜態導覽
 
 站內頁面使用原生 `<a href>`，不要換成 `next/link`。目前 vinext 靜態輸出的 Link 切頁／prefetch 會拋出 TypeError 並攔截導覽。2026-09-08 已在正式站實際點擊首頁兩個 CTA，確認 /guide 與 /downloads 正常載入。
+
+## 搜尋收錄與分享（2026-09-08）
+
+- `lib/seo.ts` 定義每頁 canonical、Open Graph／Twitter 預覽與下載頁語言對應；預覽使用現有實際 CAD 圖。
+- `public/sitemap.xml` 包含 12 個主要頁面；新增文章時需同步更新。lastmod 只在內容有實際修改時更新。
+- `public/robots.txt` 允許抓取並指出 sitemap。文章本文預渲染為 HTML；Article JSON-LD 與可見內容一致。
+- 3 篇技術筆記位於 `app/articles/`；英文下載頁在 `app/en/downloads/`。未公開私人相機照片，未增加追蹤腳本。
+- 建置後執行 `python3 scripts/verify_public.py` 與 `python3 scripts/verify_seo.py`。
+- Search Console：待使用者確認 Google 帳號後，驗證 `https://microduck.intemotech.com/`、提交 sitemap、檢查「Settings → Search generative AI」為 include（注意父層設定繼承）。目前尚未提交／驗證，不應宣稱 Google 已收錄。
+- Google 官方現行指引： https://developers.google.com/search/docs/fundamentals/ai-optimization-guide 。不需要 llms.txt；正常收錄、可顯示摘要和 Search Console AI 控制才是重點。符合條件仍不保證收錄或引用。
+- AI 控制與成效報表：https://support.google.com/webmasters/answer/16908024 、https://support.google.com/webmasters/answer/16984139 。2026-09-08 查閱。

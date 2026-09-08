@@ -1,7 +1,9 @@
+import {pageMetadata} from '@/lib/seo';
+export const metadata=pageMetadata("/journal","從 Microduck 到 Open Duck Mini v2：建造日誌","從起源、試印與舵機驗收，到薄板裝反、嵌件脫出及一體件改版，保留真實建造過程與待確認事項。");
 export const dynamic = 'force-static';
-import type {Metadata} from 'next';
 
-export const metadata:Metadata={title:'建造日誌'};
+
+
 export default function Journal(){return <main id="content"><header className="page-intro"><p className="eyebrow">THE STORY / FROM CURIOSITY TO PARTS</p><h1>本來只是看到一隻小鴨。</h1><p>後來，桌上多了舵機、列印件、銅螺母，也多了一份想讓別人接著做的紀錄。</p></header><div className="timeline">
 <article className="entry" id="origin"><div className="entry-date">01 / 起點<br/>2026.08</div><div><span className="badge">建造者回述</span><h2>從 Microduck，找到自己動手的路</h2><p>一開始，我們是在 <a className="textlink" href="https://pollen-robotics.com/microduck/">Pollen Robotics 的 Microduck 頁面</a>看到這隻小機器人。它讓人想繼續看下去，也讓我們開始想：如果不只看它動，而是親手做一隻，會是什麼樣子？</p><p>於是，我們循著作者與開源作品的線索往回找，找到了 <a className="textlink" href="https://github.com/apirrone/Open_Duck_Mini">apirrone／Open Duck Mini</a>。打開專案，裡面不只有影片，還有 CAD、可以列印的零件、材料清單和組裝文件。那個原本有點遙遠的念頭，開始變成一件可以拆成步驟來做的事。</p><p>最後，我們選擇從 Open Duck Mini v2 開始：研究零件、整理採購清單，再用自己的 3D 印表機，一件一件把它做出來。這也是網站叫做 microduck，而實作內容是 Open Duck Mini v2 的原因。</p><div className="notice">Microduck 是這次計畫的起點；Open Duck Mini v2 是我們實際採用的建造版本。兩者的機構、BOM 與控制設定應各自核對，不能因名稱相近就混用。</div><p className="meta">這段起源依建造者的回述整理；專案資料分別連回 Pollen 官方頁與 Open Duck Mini 作者的儲存庫。</p></div></article>
 <article className="entry" id="prepare"><div className="entry-date">02 / 準備<br/>2026.08.27</div><div><span className="badge">路線確定</span><h2>先把「要做哪一隻」搞清楚</h2><p>同樣叫小鴨，不同教學使用的舵機、電壓和機構卻不一定相同。我們先把實作路線定在 Open Duck Mini v2，採用 7.4V 舵機與相應的電源配置，再整理列印件及五金。</p><p>這一步沒有讓機器人立刻動起來，卻避免後面把不同版本的零件拼在一起。材料清單先看規格，價格與店家則留給採購當下重新確認。</p><a className="textlink" href="/guide#prepare">查看這次使用的材料路線 →</a></div></article>

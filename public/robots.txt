@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://microduck.intemotech.com/sitemap.xml
