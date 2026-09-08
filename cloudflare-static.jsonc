@@ -2,6 +2,16 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "microduck-build-journal",
   "compatibility_date": "2026-09-08",
-  "assets": { "directory": "./dist/client", "not_found_handling": "404-page", "html_handling": "auto-trailing-slash" },
-  "routes": [{ "pattern": "microduck.intemotech.com", "custom_domain": true }]
+  "assets": {
+    "directory": "./dist/client",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    {
+      "pattern": "microduck.intemotech.com",
+      "custom_domain": true
+    }
+  ],
+  "account_id": "ed55dc446113891dee896596886735dd"
 }

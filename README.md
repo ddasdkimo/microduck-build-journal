@@ -1,3 +1,8 @@
+[![Validate and deploy website](https://github.com/ddasdkimo/microduck-build-journal/actions/workflows/deploy.yml/badge.svg)](https://github.com/ddasdkimo/microduck-build-journal/actions/workflows/deploy.yml)
+
+Live site: https://microduck.intemotech.com/
+Hardware fork: https://github.com/ddasdkimo/Open_Duck_Mini/tree/codex/shin-unibody
+
 # 小鴨製造所 / microduck-build-journal
 
 公開建造日誌與重現指南。實作為 Open Duck Mini v2，起源故事來自建造者看到 Pollen Robotics Microduck 後循開源線索找到本專案。
@@ -23,7 +28,7 @@ npm run deploy
 - 每次新增日誌寫清楚日期、實測／CAD／待確認，不能把幾何驗證當成實物驗收。
 - 不放入私人照片、連線位址、憑證、完整對話。
 
-## Repo 分工建議
+## Repo 分工
 
 1. fork apirrone/Open_Duck_Mini 的 v2，維護硬體改版與重建程式；保留 upstream。
 2. 本站單獨一個 microduck-build-journal repo，獨立版本與發布。
@@ -49,3 +54,9 @@ CAD 基準 b23317a485b3cec7d8417f352478778b3475173c。下載包保留 Apache-2.0
 - Search Console：2026-09-08 經使用者確認帳號後，以 HTML meta 驗證 `https://microduck.intemotech.com/` 擁有權。已提交 sitemap，Google 顯示成功、探索到 12 個網頁。Google 搜尋生成式 AI 沿用 intemotech.com，實際控制值為「包含」；保持既有設定。這不表示 12 頁已建立索引或已被 AI 引用。請保留首頁 google-site-verification 標記。
 - Google 官方現行指引： https://developers.google.com/search/docs/fundamentals/ai-optimization-guide 。不需要 llms.txt；正常收錄、可顯示摘要和 Search Console AI 控制才是重點。符合條件仍不保證收錄或引用。
 - AI 控制與成效報表：https://support.google.com/webmasters/answer/16908024 、https://support.google.com/webmasters/answer/16984139 。2026-09-08 查閱。
+
+## GitHub 自動部署
+
+Push 到 `main` 後，GitHub Actions 會安裝鎖定依賴、檢查 TypeScript、建置靜態頁、檢查連結／SEO，再部署到 microduck.intemotech.com。PR 只跑檢查，不發布。部署使用 repo Secret `CLOUDFLARE_API_TOKEN`；不要把 Token 寫進程式或設定檔。
+
+`public/` 內的下載與圖片快照已納入 Git，CI 不需要私人父專案。`prepare:assets` 僅供原建造工作區維護者同步資產。
