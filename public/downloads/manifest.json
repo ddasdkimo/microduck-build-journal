@@ -1,0 +1,66 @@
+{
+  "reader-baseline.json": {
+    "bytes": 8039,
+    "sha256": "ba0a45d14deb6b6356c3b00a2b0dbaf720d595768ce9ff31437d7ba9c1bb16bf"
+  },
+  "hip-exploded-cad.png": {
+    "bytes": 324304,
+    "sha256": "1cdaf61362cee24e11d348b63b6235218bf2d254bbb0cc0c7aa77e4616fc1a11"
+  },
+  "hip-exploded-cad.svg": {
+    "bytes": 501648,
+    "sha256": "fd42f8fc39b2a45076e85a286ffc32f680b3ca655ea839a2d626c4b5ffccd851"
+  },
+  "shin-v1-geometry.json": {
+    "bytes": 424,
+    "sha256": "a878413bd7f97f0c8c68dd3d33e1284ccffafaacef60eb74d027c13393729afd"
+  },
+  "reader-checklist.md": {
+    "bytes": 3288,
+    "sha256": "774fbb78426e6fcdf889f00a4e38770b5b98a8cfdb00cb7c192f5618fb90e45d"
+  },
+  "shin-v2-geometry.json": {
+    "bytes": 562,
+    "sha256": "1fd658d086153df30abd159859387a5555430ea1d06326d835a7f14c3a04e09f"
+  },
+  "right-shin-v2.stl": {
+    "bytes": 635384,
+    "sha256": "9689d8bc35e4776bf1f7b75ea2f2946ab23ba7062f5f4f2dd7adb60efdf0cdbd"
+  },
+  "right-shin-v1.stl": {
+    "bytes": 759984,
+    "sha256": "af7e7765d027ff544a7a3bb09b073d8722ec9a20769c18b938ad7f096a821500"
+  },
+  "right-exploded-cad.svg": {
+    "bytes": 465980,
+    "sha256": "0b3d42e26071a358f9fa35bb0a0a6db1e55205021127147dee00f7899aae9b3e"
+  },
+  "shin-reproduction.zip": {
+    "bytes": 189781,
+    "sha256": "5e720d59e133fdfa5a098af7bbd0457d047eb89e629ae6020bf87a2ba05d0f93"
+  },
+  "full-exploded-cad.png": {
+    "bytes": 464204,
+    "sha256": "72da6d6a769313864692b41102755739c3cc6a8fa476b77d358847762f88cc4d"
+  },
+  "LICENSE-Open-Duck-Mini.txt": {
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "full-exploded-cad.svg": {
+    "bytes": 714487,
+    "sha256": "f03c49dbcec81a945fa961b3e29fcc97225998453fc5c4730096a3a9f488baa0"
+  },
+  "shin-reproduction-README.md": {
+    "bytes": 1000,
+    "sha256": "df2c8dd6eb43d9fe27d9545f423451f48922d50fc5849da07ad2ba0ff8243988"
+  },
+  "right-exploded-cad.png": {
+    "bytes": 349820,
+    "sha256": "30b70e8523c67424bc44721daca34e5f33db3d35e9ddfb39e002fe292ad2533d"
+  },
+  "servo-acceptance-log.md": {
+    "bytes": 2875,
+    "sha256": "89930076b3caa6c73928b14f608a302464fb445540615146e4719ce2c0d8313c"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "units": "mm",
+  "source_link": "knee_and_ankle_assembly_4",
+  "parts": [
+    "leg_spacer.stl",
+    "left_knee_to_ankle_right_sheet.stl",
+    "left_knee_to_ankle_left_sheet.stl"
+  ],
+  "extents_mm": [
+    30.700000762939453,
+    70.64999389648438,
+    44.849998474121094
+  ],
+  "watertight": true,
+  "connected_components": 1,
+  "volume_mm3": 22666.4521274901,
+  "preview_only": true,
+  "spacer_end_extension_mm": 0.25,
+  "filled_fixing_axes_xy_mm": [
+    [
+      -8,
+      4
+    ],
+    [
+      8,
+      4
+    ]
+  ],
+  "added_volume_mm3": 773.8681867470077
+}
