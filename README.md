@@ -34,3 +34,7 @@ npm run deploy
 
 https://github.com/apirrone/Open_Duck_Mini
 CAD 基準 b23317a485b3cec7d8417f352478778b3475173c。下載包保留 Apache-2.0。網站為非官方紀錄。
+
+## 靜態導覽
+
+站內頁面使用原生 `<a href>`，不要換成 `next/link`。目前 vinext 靜態輸出的 Link 切頁／prefetch 會拋出 TypeError 並攔截導覽。2026-09-08 已在正式站實際點擊首頁兩個 CTA，確認 /guide 與 /downloads 正常載入。
