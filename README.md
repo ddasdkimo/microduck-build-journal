@@ -46,6 +46,6 @@ CAD 基準 b23317a485b3cec7d8417f352478778b3475173c。下載包保留 Apache-2.0
 - `public/robots.txt` 允許抓取並指出 sitemap。文章本文預渲染為 HTML；Article JSON-LD 與可見內容一致。
 - 3 篇技術筆記位於 `app/articles/`；英文下載頁在 `app/en/downloads/`。未公開私人相機照片，未增加追蹤腳本。
 - 建置後執行 `python3 scripts/verify_public.py` 與 `python3 scripts/verify_seo.py`。
-- Search Console：待使用者確認 Google 帳號後，驗證 `https://microduck.intemotech.com/`、提交 sitemap、檢查「Settings → Search generative AI」為 include（注意父層設定繼承）。目前尚未提交／驗證，不應宣稱 Google 已收錄。
+- Search Console：2026-09-08 經使用者確認帳號後，以 HTML meta 驗證 `https://microduck.intemotech.com/` 擁有權。已提交 sitemap，Google 顯示成功、探索到 12 個網頁。Google 搜尋生成式 AI 沿用 intemotech.com，實際控制值為「包含」；保持既有設定。這不表示 12 頁已建立索引或已被 AI 引用。請保留首頁 google-site-verification 標記。
 - Google 官方現行指引： https://developers.google.com/search/docs/fundamentals/ai-optimization-guide 。不需要 llms.txt；正常收錄、可顯示摘要和 Search Console AI 控制才是重點。符合條件仍不保證收錄或引用。
 - AI 控制與成效報表：https://support.google.com/webmasters/answer/16908024 、https://support.google.com/webmasters/answer/16984139 。2026-09-08 查閱。
