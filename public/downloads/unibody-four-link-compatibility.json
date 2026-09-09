@@ -1,0 +1,15 @@
+{
+  "reference": "knee_and_ankle_assembly_4",
+  "same_source_meshes": [
+    "leg_spacer.stl",
+    "left_knee_to_ankle_right_sheet.stl",
+    "left_knee_to_ankle_left_sheet.stl"
+  ],
+  "relative_transform_max_abs_difference": {
+    "knee_and_ankle_assembly": 1.6617685005826383e-15,
+    "knee_and_ankle_assembly_2": 7.151271796956906e-15,
+    "knee_and_ankle_assembly_3": 1.9850310284397125e-15,
+    "knee_and_ankle_assembly_4": 0.0
+  },
+  "result": "Identical source geometry and relative placement within 1e-8; same unibody geometry applies without mirroring. Assembly access still needs physical verification."
+}
