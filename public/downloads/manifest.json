@@ -1,4 +1,8 @@
 {
+  "left-exploded-cad.png": {
+    "bytes": 395441,
+    "sha256": "ae8638a0c5ed0ac533aa5a00c2f95e8eb4aaf05fee59aba37fbbae76d45e7206"
+  },
   "reader-baseline.json": {
     "bytes": 8039,
     "sha256": "ba0a45d14deb6b6356c3b00a2b0dbaf720d595768ce9ff31437d7ba9c1bb16bf"
@@ -7,9 +11,13 @@
     "bytes": 324304,
     "sha256": "1cdaf61362cee24e11d348b63b6235218bf2d254bbb0cc0c7aa77e4616fc1a11"
   },
+  "remaining-print-2026-09-09.md": {
+    "bytes": 3043,
+    "sha256": "edfe9d2cdbd1b1a2563dad34ecc1b9a09b6c71c7f66f9e9df6f8f3b73061d3ac"
+  },
   "hip-exploded-cad.svg": {
     "bytes": 501648,
-    "sha256": "fd42f8fc39b2a45076e85a286ffc32f680b3ca655ea839a2d626c4b5ffccd851"
+    "sha256": "e8ab73da8c0cc450bd71de7e5710db17df23321923dbbda06adde242307e0393"
   },
   "shin-v1-geometry.json": {
     "bytes": 424,
@@ -18,6 +26,14 @@
   "reader-checklist.md": {
     "bytes": 3288,
     "sha256": "774fbb78426e6fcdf889f00a4e38770b5b98a8cfdb00cb7c192f5618fb90e45d"
+  },
+  "remaining-print-2026-09-09.zip": {
+    "bytes": 2657256,
+    "sha256": "0aff6be09a345874f51e3a4cf331fb95e12bbddfa9898906ddf43203eacdb692"
+  },
+  "left-exploded-cad.svg": {
+    "bytes": 529855,
+    "sha256": "adc32aa8a3098a4cb5b95fd4c96c38952c444459b8bfc921a70188e866b6b06a"
   },
   "shin-v2-geometry.json": {
     "bytes": 562,
@@ -31,13 +47,17 @@
     "bytes": 759984,
     "sha256": "af7e7765d027ff544a7a3bb09b073d8722ec9a20769c18b938ad7f096a821500"
   },
+  "unibody-four-link-compatibility.json": {
+    "bytes": 613,
+    "sha256": "dbaf1125bcba9d98490c971234f44f2e9ccfa0b7e0705bf77abc24fe565a416b"
+  },
   "right-exploded-cad.svg": {
     "bytes": 465980,
-    "sha256": "0b3d42e26071a358f9fa35bb0a0a6db1e55205021127147dee00f7899aae9b3e"
+    "sha256": "c18310e58b8b8298ed0eec4592af59409b8aaafa4f6f67b2b73fcd6573988022"
   },
   "shin-reproduction.zip": {
-    "bytes": 189781,
-    "sha256": "5e720d59e133fdfa5a098af7bbd0457d047eb89e629ae6020bf87a2ba05d0f93"
+    "bytes": 190539,
+    "sha256": "4eadff89e630de4881296bec4e6d9e3f8136e2c200cfd90cddc6ebf5b657a9e2"
   },
   "full-exploded-cad.png": {
     "bytes": 464204,
@@ -49,7 +69,7 @@
   },
   "full-exploded-cad.svg": {
     "bytes": 714487,
-    "sha256": "f03c49dbcec81a945fa961b3e29fcc97225998453fc5c4730096a3a9f488baa0"
+    "sha256": "c9e1052b370271454104e94451b616703389fa2e44a04092f5536e7a1c12ded9"
   },
   "shin-reproduction-README.md": {
     "bytes": 1000,
@@ -62,17 +82,5 @@
   "servo-acceptance-log.md": {
     "bytes": 2875,
     "sha256": "89930076b3caa6c73928b14f608a302464fb445540615146e4719ce2c0d8313c"
-  },
-  "remaining-print-2026-09-09.zip": {
-    "bytes": 2657256,
-    "sha256": "0aff6be09a345874f51e3a4cf331fb95e12bbddfa9898906ddf43203eacdb692"
-  },
-  "remaining-print-2026-09-09.md": {
-    "bytes": 3043,
-    "sha256": "edfe9d2cdbd1b1a2563dad34ecc1b9a09b6c71c7f66f9e9df6f8f3b73061d3ac"
-  },
-  "unibody-four-link-compatibility.json": {
-    "bytes": 613,
-    "sha256": "dbaf1125bcba9d98490c971234f44f2e9ccfa0b7e0705bf77abc24fe565a416b"
   }
 }
