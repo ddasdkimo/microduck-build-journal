@@ -27,6 +27,7 @@ s=s.replace('OPEN DUCK MINI V2</','<a href="/">小鴨製造所 / 回首頁</a></
 s=s.replace('David','建造者')
 s=s.replace('</footer>','<p><a href="/sources/">資料來源與授權</a> · 本圖是 CAD 零位，實物狀態請見建造日誌。</p></footer>')
 s=s.replace('</head>','<link rel="canonical" href="https://microduck.intemotech.com/assembly"/><meta name="robots" content="index,follow,max-image-preview:large"/></head>',1)
+s=s.replace('</body>','<script type="module" src="/web-analytics.js"></script></body>')
 (PUB/'assembly.html').write_text(s)
 # Create a reader-owned checklist. Original builder progress is never inherited.
 s=(GUIDE/'duck-checklist.html').read_text()
@@ -50,6 +51,7 @@ s=s.replace('同資料夾的 build-checklist.md','重現指南 /guide/').replace
 s=s.replace('2026-09-07-codex-v1' ,'public-reader-v1-2026-09-08').replace('David','建造者')
 s=s.replace('handoff-codex-2026-09-07.md','/sources').replace('build-checklist.md','/downloads/reader-checklist.md').replace('build-status.json','/downloads/reader-baseline.json')
 s=s.replace('</head>','<link rel="canonical" href="https://microduck.intemotech.com/checklist"/><meta name="robots" content="index,follow,max-image-preview:large"/></head>',1)
+s=s.replace('</body>','<script type="module" src="/web-analytics.js"></script></body>')
 (PUB/'checklist.html').write_text(s)
 (PUB/'downloads/reader-baseline.json').write_text(json.dumps(data,ensure_ascii=False,indent=2))
 lines=['# 你的 Open Duck Mini v2 建造清單','所有項目從未完成開始，請依自己的實測填寫。','']
