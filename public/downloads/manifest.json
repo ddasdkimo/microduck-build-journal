@@ -82,5 +82,13 @@
   "servo-acceptance-log.md": {
     "bytes": 2875,
     "sha256": "89930076b3caa6c73928b14f608a302464fb445540615146e4719ce2c0d8313c"
+  },
+  "body-exploded-cad.png": {
+    "bytes": 375915,
+    "sha256": "9fd8a028511cb64ce772813856d2eed8a0b1bef32e74bddca5372b368e1e2e35"
+  },
+  "body-exploded-cad.svg": {
+    "bytes": 534354,
+    "sha256": "4d8c5d73a33f44778287f535cb712f6d9d149b859360201c18f2ecd97ac40f52"
   }
 }

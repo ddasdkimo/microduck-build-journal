@@ -2,7 +2,7 @@
 from pathlib import Path
 import re,json,base64,hashlib,shutil,zipfile,subprocess
 SITE=Path(__file__).resolve().parents[1];ROOT=SITE.parent;PUB=SITE/'public';GUIDE=ROOT/'docs/build-guide'
-for scene in ['hip','right','left','full']:
+for scene in ['hip','right','left','body','full']:
  for ext in ['png','svg']:
   shutil.copy2(GUIDE/'img'/f'{scene}-exploded-cad.{ext}',PUB/'downloads'/f'{scene}-exploded-cad.{ext}')
 for ver,stem in [('v1','preview'),('v2','filled')]:
