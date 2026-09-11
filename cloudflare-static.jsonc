@@ -5,7 +5,11 @@
   "assets": {
     "directory": "./dist/client",
     "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
   },
   "routes": [
     {
@@ -13,5 +17,17 @@
       "custom_domain": true
     }
   ],
-  "account_id": "ed55dc446113891dee896596886735dd"
+  "account_id": "ed55dc446113891dee896596886735dd",
+  "main": "worker/comments.ts",
+  "d1_databases": [
+    {
+      "binding": "COMMENTS_DB",
+      "database_name": "microduck-comments",
+      "database_id": "ef7b58f6-4e16-4c8a-8aac-76271b621fb3",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAEvx3gjl2EL8kVyK"
+  }
 }

@@ -60,3 +60,7 @@ CAD 基準 b23317a485b3cec7d8417f352478778b3475173c。下載包保留 Apache-2.0
 Push 到 `main` 後，GitHub Actions 會安裝鎖定依賴、檢查 TypeScript、建置靜態頁、檢查連結／SEO，再部署到 microduck.intemotech.com。PR 只跑檢查，不發布。部署使用 repo Secret `CLOUDFLARE_API_TOKEN`；不要把 Token 寫進程式或設定檔。
 
 `public/` 內的下載與圖片快照已納入 Git，CI 不需要私人父專案。`prepare:assets` 僅供原建造工作區維護者同步資產。
+
+## 留言功能
+
+技術文章、建造日誌與下載頁提供匿名留言，先審核再公開。D1儲存與管理方式見 [docs/comments.md](docs/comments.md)。Cloudflare 靜態資產搭配 `/api/*` 留言 Worker；管理頁 `/moderation.html`。

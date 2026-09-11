@@ -1,0 +1,32 @@
+import {test,after} from 'node:test';
+import assert from 'node:assert/strict';
+import {Miniflare} from 'miniflare';
+import {readFile} from 'node:fs/promises';
+import {handle,validate} from '../work/comments-worker.mjs';
+const mf=new Miniflare({modules:true,script:'export default {fetch(){return new Response("test")}}',d1Databases:['COMMENTS_DB']});
+const DB=await mf.getD1Database('COMMENTS_DB');
+const sql=await readFile(new URL('../migrations/0001_comments.sql',import.meta.url),'utf8');
+await DB.batch(sql.split(';').map(x=>x.trim()).filter(Boolean).map(x=>DB.prepare(x)));
+const env={COMMENTS_DB:DB,TURNSTILE_SITE_KEY:'test',TURNSTILE_SECRET:'test',COMMENTS_HASH_SECRET:'test-secret',COMMENTS_ADMIN_TOKEN:'private-test-token'};
+const origin='https://microduck.intemotech.com';
+const good=async()=>Response.json({success:true,hostname:'microduck.intemotech.com',action:'comment'});
+const entry=()=>({thread:'downloads',nickname:'',body:'<script>alert(1)</script> 測試',token:'test',requestId:crypto.randomUUID()});
+function request(path,method='GET',data,ip='203.0.113.1',admin=false){return new Request(origin+path,{method,headers:{Origin:origin,'Content-Type':'application/json','CF-Connecting-IP':ip,...(admin?{Authorization:'Bearer private-test-token'}:{})},...(data?{body:JSON.stringify(data)}:{})})}
+after(()=>mf.dispose());
+test('invalid page / length / token rejected',()=>{for(const d of [{...entry(),thread:'bad'},{...entry(),body:''},{...entry(),nickname:'x'.repeat(41)},{...entry(),token:''}])assert.throws(()=>validate(d))});
+test('pending comments private, moderation requires auth, approval and hiding work',async()=>{
+ const d=entry();assert.equal((await handle(request('/api/comments','POST',d),env,good)).status,202);
+ let res=await (await handle(request('/api/comments?thread=downloads'),env)).json();assert.equal(res.comments.length,0);
+ assert.equal((await handle(request('/api/moderation'),env)).status,401);
+ const list=await (await handle(request('/api/moderation','GET',null,'',true),env)).json();const c=list.comments[0];assert.equal(c.nickname,'匿名');assert.equal(c.body,d.body);assert.equal(c.sender_hash,undefined);
+ assert.equal((await handle(request('/api/moderation','POST',{id:c.id,action:'approve'},'',true),env)).status,200);
+ res=await (await handle(request('/api/comments?thread=downloads'),env)).json();assert.equal(res.comments[0].body,d.body);assert.equal(res.comments[0].request_id,undefined);
+ assert.equal((await handle(request('/api/moderation','POST',{id:c.id,action:'hide'},'',true),env)).status,200);
+ res=await (await handle(request('/api/comments?thread=downloads'),env)).json();assert.equal(res.comments.length,0);
+});
+test('idempotent retry does not verify twice',async()=>{const d=entry();assert.equal((await handle(request('/api/comments','POST',d,'203.0.113.2'),env,good)).status,202);const res=await handle(request('/api/comments','POST',d,'203.0.113.2'),env,()=>{throw Error('must not verify again')});assert.equal(res.status,202)});
+test('atomic same-IP throttle permits one concurrent submission',async()=>{const results=await Promise.all([entry(),entry()].map(d=>handle(request('/api/comments','POST',d,'203.0.113.3'),env,good)));assert.deepEqual(results.map(r=>r.status).sort(),[202,429])});
+test('wrong Turnstile hostname, action, invalid token rejected',async()=>{for(const v of [{success:false},{success:true,hostname:'evil.test',action:'comment'},{success:true,hostname:'microduck.intemotech.com',action:'other'}]){const res=await handle(request('/api/comments','POST',entry(),'203.0.113.4'),env,async()=>Response.json(v));assert.equal(res.status,403)}});
+test('cross-origin submission blocked',async()=>{const req=request('/api/comments','POST',entry());req.headers.set('Origin','https://evil.test');assert.equal((await handle(req,env,good)).status,403)});
+test('oversized JSON body rejected',async()=>{assert.equal((await handle(request('/api/comments','POST',{...entry(),body:'a'.repeat(13000)}),env,good)).status,413)});
+test('D1 stores no raw IP',async()=>{const {results}=await DB.prepare('SELECT * FROM comments').all();assert(!JSON.stringify(results).includes('203.0.113.'));assert(results.every(r=>r.sender_hash===null||/^[a-f0-9]{64}$/.test(r.sender_hash)))});
