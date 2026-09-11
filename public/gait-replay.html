@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Microduck 懸空步態同步回放</title>
+  <style>
+    :root{color-scheme:dark;--bg:#102126;--panel:#173139;--line:#38545a;--mint:#82e2c4;--gold:#e1b765;--text:#edf7f3;--muted:#a9c0bd}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"PingFang TC",sans-serif}main{max-width:1500px;margin:auto;padding:20px}.top{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:16px}.eyebrow{font:12px ui-monospace,monospace;letter-spacing:.13em;color:var(--mint)}h1{font-size:clamp(1.4rem,3vw,2rem);margin:4px 0}.truth{max-width:680px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr);gap:14px}.card{border:1px solid var(--line);background:var(--panel);border-radius:10px;overflow:hidden}.card h2{font-size:1rem;margin:0;padding:12px 15px;border-bottom:1px solid var(--line)}video{width:100%;display:block;background:#000;aspect-ratio:16/9}#model{height:min(58vw,590px);min-height:390px;position:relative}#model canvas{display:block}.model-note{position:absolute;left:12px;bottom:10px;background:#102126d9;padding:6px 9px;border-radius:5px;color:var(--muted);font-size:12px}.timeline{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 15px;border-top:1px solid var(--line)}#phase{color:var(--gold);font-weight:700}.snapshots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}.metric{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:#132a31}.metric strong{display:block;font-size:1.05rem;color:var(--mint)}.metric span{font-size:12px;color:var(--muted)}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th,td{text-align:left;padding:9px 11px;border-bottom:1px solid #2d494f;white-space:nowrap}th{font-size:12px;color:var(--muted)}td.angle{font-size:1.05rem;color:var(--mint)}.active{background:#23424a}.foot{color:var(--muted);font-size:13px;margin-top:12px}.foot strong{color:var(--text)}a{color:var(--mint)}button{font:inherit;color:var(--text);background:#21434b;border:1px solid #547078;padding:7px 11px;border-radius:6px;cursor:pointer}@media(max-width:900px){.grid{grid-template-columns:1fr}#model{height:480px}.snapshots{grid-template-columns:1fr 1fr}}@media(max-width:520px){main{padding:10px}.top{display:block}.snapshots{grid-template-columns:1fr 1fr}#model{height:390px}th,td{padding:8px}}
+  </style>
+</head>
+<body>
+<main>
+  <header class="top"><div><div class="eyebrow">TEST REPLAY / 2026.09.11</div><h1>懸空步態 · 影片、馬達資料與 3D 同步回放</h1></div><p class="truth">角度是依控制程式重建的指令值；電氣資料是測試完成後的安全快照。這次沒有逐幀保存舵機回授。</p></header>
+  <section class="grid">
+    <div class="card"><h2>現場影片</h2><video id="video" controls playsinline preload="metadata" poster="/assets/microduck-suspended-gait-demo-poster.jpg"><source src="/media/microduck-suspended-gait-demo-2026-09-11.mp4" type="video/mp4"></video><div class="timeline"><div><span id="phase">等待播放</span><br><small id="clock">00:00.0 / 00:36.1</small></div><button id="home">重設 3D 視角</button></div></div>
+    <div class="card"><h2>3D 指令姿態重建</h2><div id="model" aria-label="與影片時間同步的 Open Duck Mini v2 三維姿態"><div class="model-note">拖曳旋轉 · 滾輪縮放</div></div></div>
+  </section>
+  <section class="snapshots" aria-label="測試資料來源"><div class="metric"><strong id="angleSource">指令值</strong><span>角度資料來源</span></div><div class="metric"><strong>7.2 V</strong><span>完成後腿部讀值</span></div><div class="metric"><strong>28–29°C</strong><span>完成後腿部讀值</span></div><div class="metric"><strong>0 / 0 / OFF</strong><span>電流 raw／status／扭力</span></div></section>
+  <div class="table-wrap"><table><thead><tr><th>馬達</th><th>關節</th><th>指令相對角</th><th>推算目標角</th><th>完成後 V</th><th>完成後溫度</th></tr></thead><tbody id="motors"></tbody></table></div>
+  <p class="foot"><strong>同步方法：</strong>影片時間對應 12 個 1.8 秒的餘弦緩動階段，起點依影像對齊。推算目標角＝測試起始快照＋相對指令角；它不是逐幀量測值。本次動作在懸空狀態完成，尚未通過落地平衡或承重行走。</p>
+</main>
+<script src="/assets/three.min.js"></script>
+<script src="/gait-replay.js"></script>
+</body>
+</html>
