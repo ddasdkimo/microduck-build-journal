@@ -2,7 +2,7 @@
 from pathlib import Path
 import re,json,base64,hashlib,shutil,zipfile,subprocess
 SITE=Path(__file__).resolve().parents[1];ROOT=SITE.parent;PUB=SITE/'public';GUIDE=ROOT/'docs/build-guide'
-for scene in ['hip','right','left','body','full']:
+for scene in ['hip','right','left','body','neck','full']:
  for ext in ['png','svg']:
   shutil.copy2(GUIDE/'img'/f'{scene}-exploded-cad.{ext}',PUB/'downloads'/f'{scene}-exploded-cad.{ext}')
 for ver,stem in [('v1','preview'),('v2','filled')]:
@@ -83,7 +83,9 @@ python3.11 -m venv .venv
 
 build_assembly_data.py 在本包中僅提供 tf、ROOT、SOURCE，不能單独執行完整全機生成（其餘全機網格請從上游取得）。
 '''
-req=subprocess.check_output([str(ROOT/'Open_Duck_Playground/.venv/bin/python'),'-c','import importlib.metadata as m;print("\\n".join(n+"=="+m.version(n) for n in ["numpy","scipy","trimesh","matplotlib","rtree"]))'],text=True)
+# Keep the published reproduction environment deterministic. Asset preparation must
+# not depend on a developer-only virtualenv being present beside the repository.
+req='numpy==2.4.6\nscipy==1.17.1\ntrimesh==5.1.0\nmatplotlib==3.11.1\nrtree==1.4.1\n'
 with zipfile.ZipFile(PUB/'downloads/shin-reproduction.zip','w',zipfile.ZIP_DEFLATED) as z:
  for f in ['build_assembly_data.py','build_shin_unibody.py','build_shin_unibody_filled.py']:
   z.write(ROOT/'sim/print'/f,'sim/print/'+f)

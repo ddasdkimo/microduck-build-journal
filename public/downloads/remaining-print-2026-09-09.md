@@ -6,7 +6,7 @@
 
 左腿兩組薄板＋spacer（6件）改為 right-shin-unibody-v2 中央孔補滿的一體框架（2件），分別用於左大腿與左小腿。CAD 四段腿的來源網格與相對配置一致，沒有鏡射。左腿實物裝入、走線與強度仍需驗證；建議先印一件試配，再印第二件。
 
-分組：左腿 7、身體外殼 8、頸部 5、頭部 11。PLA 15% 填充，TPU 40%（上游設定）；一體版尚無經驗證的切片設定，請確認擺放、支撐與貼床。毫米單位，尚未切片。
+分組：左腿 7、腿部外側護蓋 2、身體外殼 6、頸部 5、頭部 11。`left_cache`／`right_cache` 是左右大腿護蓋。PLA 15% 填充，TPU 40%（上游設定）；一體版尚無經驗證的切片設定，請確認擺放、支撐與貼床。毫米單位，尚未切片。
 
 來源：Open Duck Mini v2，上游基準 b23317a485b3cec7d8417f352478778b3475173c。
 https://github.com/apirrone/Open_Duck_Mini
@@ -27,8 +27,8 @@ https://github.com/apirrone/Open_Duck_Mini
 - [ ] 02_身體外殼/PLA_15%/body_front__01_of_01.stl
 - [ ] 02_身體外殼/PLA_15%/body_middle_bottom__01_of_01.stl
 - [ ] 02_身體外殼/PLA_15%/body_middle_top__01_of_01.stl
-- [ ] 02_身體外殼/PLA_15%/left_cache__01_of_01.stl
-- [ ] 02_身體外殼/PLA_15%/right_cache__01_of_01.stl
+- [ ] 02_腿部外側護蓋/PLA_15%/left_cache__01_of_01.stl（左大腿外側護蓋）
+- [ ] 02_腿部外側護蓋/PLA_15%/right_cache__01_of_01.stl（右大腿外側護蓋）
 - [ ] 02_身體外殼/PLA_15%/trunk_top__01_of_01.stl
 - [ ] 03_頸部/PLA_15%/head_pitch_to_yaw__01_of_01.stl
 - [ ] 03_頸部/PLA_15%/head_roll_mount__01_of_01.stl

@@ -1,23 +1,31 @@
 {
+  "body-exploded-cad.png": {
+    "bytes": 386587,
+    "sha256": "d9f0e8805b34da60af3fe5aaf01c28c7a314ad8746cd11da81ea4b4275429868"
+  },
   "left-exploded-cad.png": {
-    "bytes": 395441,
-    "sha256": "ae8638a0c5ed0ac533aa5a00c2f95e8eb4aaf05fee59aba37fbbae76d45e7206"
+    "bytes": 433197,
+    "sha256": "1f051458ebe270c87f99ad38abb14f94b7e4e2f19ef853c6c7a4138c8ca1bbea"
   },
   "reader-baseline.json": {
     "bytes": 8039,
     "sha256": "ba0a45d14deb6b6356c3b00a2b0dbaf720d595768ce9ff31437d7ba9c1bb16bf"
   },
+  "neck-exploded-cad.png": {
+    "bytes": 258623,
+    "sha256": "7ee9edc8b6defa9387952766ecb9216c77d110b4be14c8d58ef3bb587c47694b"
+  },
   "hip-exploded-cad.png": {
-    "bytes": 324304,
-    "sha256": "1cdaf61362cee24e11d348b63b6235218bf2d254bbb0cc0c7aa77e4616fc1a11"
+    "bytes": 324195,
+    "sha256": "dfa9eb003e143ccb3a6fdbb67187b6666bcdeefb094d89ae015820199b72483f"
   },
   "remaining-print-2026-09-09.md": {
-    "bytes": 3043,
-    "sha256": "edfe9d2cdbd1b1a2563dad34ecc1b9a09b6c71c7f66f9e9df6f8f3b73061d3ac"
+    "bytes": 3185,
+    "sha256": "709ec92be221fb9acad91b1c8eba8d8d7303bf6a699323b2ef3e9541f9d09732"
   },
   "hip-exploded-cad.svg": {
-    "bytes": 501648,
-    "sha256": "e8ab73da8c0cc450bd71de7e5710db17df23321923dbbda06adde242307e0393"
+    "bytes": 501490,
+    "sha256": "ddbdc3eb546b65b98c0586fec943a5ed656d365fffbc627e62ddb131c79f2f1a"
   },
   "shin-v1-geometry.json": {
     "bytes": 424,
@@ -27,13 +35,21 @@
     "bytes": 3288,
     "sha256": "774fbb78426e6fcdf889f00a4e38770b5b98a8cfdb00cb7c192f5618fb90e45d"
   },
+  "neck-exploded-cad.svg": {
+    "bytes": 360810,
+    "sha256": "545057dd6e2532376715d401f27e10f930dc814ccb6821e038305f4c13c533bc"
+  },
   "remaining-print-2026-09-09.zip": {
-    "bytes": 2657256,
-    "sha256": "0aff6be09a345874f51e3a4cf331fb95e12bbddfa9898906ddf43203eacdb692"
+    "bytes": 2653492,
+    "sha256": "48bd9e32a67b880db34712420e179479bf7def2497f9631d74213f81e79a7dc1"
   },
   "left-exploded-cad.svg": {
-    "bytes": 529855,
-    "sha256": "adc32aa8a3098a4cb5b95fd4c96c38952c444459b8bfc921a70188e866b6b06a"
+    "bytes": 578739,
+    "sha256": "2b7d733ba0f918477efca686f0e38fda2a5d252d1034bc0cd0342410fdaa4bc9"
+  },
+  "body-exploded-cad.svg": {
+    "bytes": 540745,
+    "sha256": "9791a142223841592e49a260d227c1fbcac6cf1b15568b512b7e25c4ad3c14a6"
   },
   "shin-v2-geometry.json": {
     "bytes": 562,
@@ -52,43 +68,35 @@
     "sha256": "dbaf1125bcba9d98490c971234f44f2e9ccfa0b7e0705bf77abc24fe565a416b"
   },
   "right-exploded-cad.svg": {
-    "bytes": 465980,
-    "sha256": "c18310e58b8b8298ed0eec4592af59409b8aaafa4f6f67b2b73fcd6573988022"
+    "bytes": 497152,
+    "sha256": "f2c1c27fdd28b1783e044c41a0760b9ccbe8a292acfb62cef5186b2027d65e57"
   },
   "shin-reproduction.zip": {
-    "bytes": 190539,
-    "sha256": "4eadff89e630de4881296bec4e6d9e3f8136e2c200cfd90cddc6ebf5b657a9e2"
+    "bytes": 192303,
+    "sha256": "b63e999a7c6bf7affd2be6da0afe5cd384c79a4068911e9dd6a68586786c4c58"
   },
   "full-exploded-cad.png": {
-    "bytes": 464204,
-    "sha256": "72da6d6a769313864692b41102755739c3cc6a8fa476b77d358847762f88cc4d"
+    "bytes": 464090,
+    "sha256": "794cecbb84a712393ab8821f4b4e8d0789e1d9b00651ad09b3d96e32d3f40eb8"
   },
   "LICENSE-Open-Duck-Mini.txt": {
     "bytes": 11357,
     "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
   },
   "full-exploded-cad.svg": {
-    "bytes": 714487,
-    "sha256": "c9e1052b370271454104e94451b616703389fa2e44a04092f5536e7a1c12ded9"
+    "bytes": 714329,
+    "sha256": "97c4bf4b845baca4de8e3e3408d613eac604208ef98fad1fff343f19c353c014"
   },
   "shin-reproduction-README.md": {
     "bytes": 1000,
     "sha256": "df2c8dd6eb43d9fe27d9545f423451f48922d50fc5849da07ad2ba0ff8243988"
   },
   "right-exploded-cad.png": {
-    "bytes": 349820,
-    "sha256": "30b70e8523c67424bc44721daca34e5f33db3d35e9ddfb39e002fe292ad2533d"
+    "bytes": 377458,
+    "sha256": "0a3c57eeff239386202bab89fc567fb71eccaea9ea7b98523b31eb42efa662b8"
   },
   "servo-acceptance-log.md": {
     "bytes": 2875,
     "sha256": "89930076b3caa6c73928b14f608a302464fb445540615146e4719ce2c0d8313c"
-  },
-  "body-exploded-cad.png": {
-    "bytes": 386545,
-    "sha256": "942280b93dd33a6d11ebba5a2170fd3d8ad660900e38f87b87e314e75abc2e71"
-  },
-  "body-exploded-cad.svg": {
-    "bytes": 530225,
-    "sha256": "74133396084d2c2339286df31aceda93951cbead57fceebbe19fc2d443c01755"
   }
 }
