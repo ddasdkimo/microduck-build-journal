@@ -3,7 +3,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata = pageMetadata(
   '/downloads',
   'Open Duck Mini v2 爆炸圖與 STL 下載',
-  '下載右髖、右腿、全機 CAD 爆炸圖，以及小腿一體件 v1/v2 STL、重建 ZIP、幾何檢查與授權。',
+  '下載左右腿、身體、頸部、頭部與全機 CAD 爆炸圖，以及小腿一體件 STL、重建 ZIP、幾何檢查與授權。',
 );
 export const dynamic = 'force-static';
 
@@ -17,6 +17,7 @@ const drawings = [
   ['hip', '右髖座', '6 組零件，理解主動舵盤、髖座與軸承的接法。'],
   ['right', '右腿', '含 right_cache 外側護蓋；從髖座到 TPU 腳底按組件展開。'],
   ['left', '左腿', '含 left_cache 外側護蓋；左右專用件與穿線方向分開標示。'],
+  ['head', '頭部', '11 件列印件、ID 33、軸承、Pi、驅動板與耳舵機分組顯示。'],
   ['full', '全機總成', '左右腿、底座、頸部、頭部與軀幹分離顯示。'],
 ];
 export default function Downloads() {
@@ -81,7 +82,7 @@ export default function Downloads() {
       </section>
       <section className="section" id="assembly">
         <div className="section-heading">
-          <h2>六種爆炸圖</h2>
+          <h2>七種爆炸圖</h2>
           <a className="textlink" href="/assembly.html">
             開啟 3D 互動版本 ↗
           </a>

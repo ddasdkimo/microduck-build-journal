@@ -15,6 +15,10 @@
     "bytes": 258623,
     "sha256": "7ee9edc8b6defa9387952766ecb9216c77d110b4be14c8d58ef3bb587c47694b"
   },
+  "head-exploded-cad.svg": {
+    "bytes": 466807,
+    "sha256": "a2530a91393060ab4f045fe88438e3f8171ff6eab68a4dacb5661a180ecb4597"
+  },
   "hip-exploded-cad.png": {
     "bytes": 324195,
     "sha256": "dfa9eb003e143ccb3a6fdbb67187b6666bcdeefb094d89ae015820199b72483f"
@@ -25,7 +29,11 @@
   },
   "hip-exploded-cad.svg": {
     "bytes": 501490,
-    "sha256": "ddbdc3eb546b65b98c0586fec943a5ed656d365fffbc627e62ddb131c79f2f1a"
+    "sha256": "9ae3939e3bc9dfce0e624c566e59307350989e0c32166f470bc89490499bd05d"
+  },
+  "head-exploded-cad.png": {
+    "bytes": 325119,
+    "sha256": "dfc567f7e95ed474b98c6c56256ce8434ab17e8200e142d5564d57c444bf2892"
   },
   "shin-v1-geometry.json": {
     "bytes": 424,
@@ -37,7 +45,7 @@
   },
   "neck-exploded-cad.svg": {
     "bytes": 360810,
-    "sha256": "545057dd6e2532376715d401f27e10f930dc814ccb6821e038305f4c13c533bc"
+    "sha256": "32fb4c1353a0ef2320a90915409130479e226978cd49e2ccbc76248f34243098"
   },
   "remaining-print-2026-09-09.zip": {
     "bytes": 2653492,
@@ -45,11 +53,11 @@
   },
   "left-exploded-cad.svg": {
     "bytes": 578739,
-    "sha256": "2b7d733ba0f918477efca686f0e38fda2a5d252d1034bc0cd0342410fdaa4bc9"
+    "sha256": "e8ff92998d7bab8e698dabcefc47af8c99043b1e3451e1551d05e86a1a1cb869"
   },
   "body-exploded-cad.svg": {
     "bytes": 540745,
-    "sha256": "9791a142223841592e49a260d227c1fbcac6cf1b15568b512b7e25c4ad3c14a6"
+    "sha256": "af6de7ab3a8d98998551282b3486207bbd4fec256587d585ceebd998811497d6"
   },
   "shin-v2-geometry.json": {
     "bytes": 562,
@@ -69,23 +77,23 @@
   },
   "right-exploded-cad.svg": {
     "bytes": 497152,
-    "sha256": "f2c1c27fdd28b1783e044c41a0760b9ccbe8a292acfb62cef5186b2027d65e57"
+    "sha256": "e9b46b6c637b60affbdab35639e8bf6b34217cc4f11cb21f2f6f5e35781f4960"
   },
   "shin-reproduction.zip": {
-    "bytes": 192303,
-    "sha256": "b63e999a7c6bf7affd2be6da0afe5cd384c79a4068911e9dd6a68586786c4c58"
+    "bytes": 194197,
+    "sha256": "9af7031d7a949c8b005f0b86264209990459cc2baeb7d0b3ecb825c4d99f2f2b"
   },
   "full-exploded-cad.png": {
-    "bytes": 464090,
-    "sha256": "794cecbb84a712393ab8821f4b4e8d0789e1d9b00651ad09b3d96e32d3f40eb8"
+    "bytes": 469002,
+    "sha256": "ddc5c1aa304c282edb958730bdfabcea5e65ac13e4ce21e8f75f6616bc4de611"
   },
   "LICENSE-Open-Duck-Mini.txt": {
     "bytes": 11357,
     "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
   },
   "full-exploded-cad.svg": {
-    "bytes": 714329,
-    "sha256": "97c4bf4b845baca4de8e3e3408d613eac604208ef98fad1fff343f19c353c014"
+    "bytes": 716899,
+    "sha256": "06a6295bd77f42a099c9631266c231b2fb2074bf31920dde970552d1e6a388b3"
   },
   "shin-reproduction-README.md": {
     "bytes": 1000,
